@@ -35,10 +35,3 @@ struct LineTextFiled: View {
 //    .padding(20)
 //}
 
-//struct LineTextFiledTests_Previews:PreviewProvider {
-//    @State static var txt: String = ""
-//    static var previews: some View{
-//        LineTextFiled(txt: $txt)
-//            .padding(20)
-//    }
-//}
