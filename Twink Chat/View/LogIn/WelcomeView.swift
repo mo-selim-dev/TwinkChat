@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @State private var displayedText = ""  // النص المتدرج
-    private let titleText = "TwinkChat"  // النص الكامل
-    @State private var charCount = 0       // عداد الحروف
-    @State private var pulseEffect = false  // حالة لتفعيل تأثير النبض
+    @State private var displayedText = ""   
+    private let titleText = "TwinkChat"   
+    @State private var charCount = 0        
+    @State private var pulseEffect = false   
     
     var body: some View {
         NavigationStack {
@@ -30,11 +30,11 @@ struct WelcomeView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50)
                             .foregroundColor(.color2)
-                            .scaleEffect(pulseEffect ? 1.2 : 1.0)  // تغيير الحجم لتأثير النبض
-                            .opacity(pulseEffect ? 0.6 : 1.0)  // تغيير الشفافية
+                            .scaleEffect(pulseEffect ? 1.2 : 1.0)   
+                            .opacity(pulseEffect ? 0.6 : 1.0)   
                             .onAppear {
                                 startTypingEffect()
-                                startPulseEffect()  // بدء تأثير النبض عند ظهور النص
+                                startPulseEffect()   
                             }
                         
                         
@@ -54,8 +54,7 @@ struct WelcomeView: View {
                     
                     Spacer()
                     
-                    // التنقل إلى صفحة التسجيل
-                    NavigationLink(destination: LoginView()) {
+                     NavigationLink(destination: LoginView()) {
                         RoundButton(title: "Get Started", myColor: .color1)
                     }
                     
@@ -80,7 +79,7 @@ struct WelcomeView: View {
                 displayedText.append(titleText[index])
                 charCount += 1
             } else {
-                timer.invalidate()  // stop timer
+                timer.invalidate()   
             }
         }
     }
@@ -88,7 +87,7 @@ struct WelcomeView: View {
     private func startPulseEffect() {
         Timer.scheduledTimer(withTimeInterval: 0.6, repeats: true) { _ in
             withAnimation(.easeInOut(duration: 0.6)) {
-                pulseEffect.toggle()  // التبديل بين حالة النبض
+                pulseEffect.toggle()   
             }
         }
     }
