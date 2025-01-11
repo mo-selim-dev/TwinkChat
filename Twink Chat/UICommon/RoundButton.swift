@@ -23,19 +23,6 @@ struct RoundButton: View {
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60)
         .background(myColor)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .circular))
-        // style: .circular = .cornerRadius(20), but default style: .continuous nun equal it
-        //        .padding(20)
-        
-        // learning me
-        //                .clipShape(.circle)
-        //                .clipShape(Circle())
-        //                .fixedSize(horizontal: false, vertical: true)
-        //                .cornerRadius(20)  // Neglect By Apple
-        //                .clipShape(RotatedShape(shape: .ellipse, angle: Angle(degrees: 8)))
-        //                .overlay(Text("kkj")
-        //                    .font(.customfont(.semibold, fontSize: 25))
-        //                    .foregroundStyle(.white)
-        //                         , alignment: .bottomTrailing)
         
     }
 }
