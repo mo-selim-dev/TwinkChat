@@ -12,11 +12,10 @@ struct LoginView: View {
     @State private var password: String = ""
 
     var body: some View {
-        NavigationStack {  // استخدام NavigationStack لتمكين التنقل بين الصفحات
+        NavigationStack {
             VStack {
                 Spacer()
                 
-                // الشعار
                 VStack {
                     Image(systemName: "bolt.fill")
                         .resizable()
@@ -33,7 +32,6 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                // حقول الإدخال
                 VStack(spacing: 20) {
                     TextField("Email", text: $email)
                         .padding()
@@ -50,9 +48,7 @@ struct LoginView: View {
                 }
                 .padding(.bottom, 30)
                 
-                // زر تسجيل الدخول
                 Button(action: {
-                    // Action for Log In
                 }) {
                     Text("Log In")
                         .frame(maxWidth: .infinity)
@@ -64,7 +60,6 @@ struct LoginView: View {
                 .padding([.leading, .trailing], 30)
                 .padding(.bottom, 10)
                 
-                // رابط لصفحة التسجيل باستخدام NavigationLink
                 NavigationLink(destination: RegisterView()) {
                     Text("Register")
                         .frame(maxWidth: .infinity)
@@ -76,7 +71,7 @@ struct LoginView: View {
                 .padding([.leading, .trailing], 30)
                 .padding(.bottom, 40)
             }
-            .background(Color.white.ignoresSafeArea()) // خلفية بيضاء
+            .background(Color.white.ignoresSafeArea()) 
         }
     }
 }
